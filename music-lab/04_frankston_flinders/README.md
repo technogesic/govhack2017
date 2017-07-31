@@ -1,7 +1,9 @@
-Data-Driven DJ Track 1: Two Trains
+Technogesic Track 1: Frankston - Flinders - Train
 =================
 
-You can listen to this track and read the full description [here](https://datadrivendj.com/tracks/subway).
+You can listen to this track and read the full description [here](https://govhack2017.technogesic.com/).
+
+Full Credit to the DataDriven DJ for the reuse and revision of this code [here](https://datadrivendj.com/tracks/subway).
 
 ## Software Required
 
