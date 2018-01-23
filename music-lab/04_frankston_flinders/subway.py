@@ -16,7 +16,7 @@ import time
 
 # Config
 BPM = 120 # Beats per minute, e.g. 60, 75, 100, 120, 150
-METERS_PER_BEAT = 75 # Higher numbers creates shorter songs
+METERS_PER_BEAT = 125 # Higher numbers creates shorter songs
 DIVISIONS_PER_BEAT = 4 # e.g. 4 = quarter notes, 8 = eighth notes
 VARIANCE_MS = 20 # +/- milliseconds an instrument note should be off by to give it a little more "natural" feel
 VARIANCE_RATE = 0 # for adding variance to the playback rate

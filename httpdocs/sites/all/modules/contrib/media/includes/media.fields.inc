@@ -168,7 +168,7 @@ function media_field_widget_form(&$form, &$form_state, $field, $instance, $langc
     foreach ($items as $item) {
       $elements[$delta] = $element;
       $elements[$delta]['#default_value'] = $item;
-      $elements[$delta]['#weight'] = $delta;
+      $elements[$delta]['#weight'] = isset($item['_weight']) ? $item['_weight'] : $delta;
       $delta++;
     }
     // And then add one more empty row for new uploads except when this is a
@@ -274,7 +274,7 @@ function media_field_widget_process($element, &$form_state, $form) {
     $element['alt'] = array(
       '#title' => t('Alternate text'),
       '#type' => 'textfield',
-      '#default_value' => isset($current_value['alt']) ? $current_value['alt'] : '',
+      '#default_value' => isset($item['alt']) ? $item['alt'] : '',
       '#description' => t('This text will be used by screen readers, search engines, or when the image cannot be loaded.<br />
 <em>(Notice: this field is not fetched on -all- formatters yet. For example: If the Rendered file formatter will be used, this field is not available at the moment.)</em>'),
       '#maxlength' => variable_get('image_alt_length', 80),
@@ -287,7 +287,7 @@ function media_field_widget_process($element, &$form_state, $form) {
     $element['title'] = array(
       '#type' => 'textfield',
       '#title' => t('Title'),
-      '#default_value' => isset($current_value['title']) ? $current_value['title'] : '',
+      '#default_value' => isset($item['title']) ? $item['title'] : '',
       '#description' => t('The title is used as a tool tip when the user hovers the mouse over the image.<br />
 <em>(Notice: this field is not fetched on -all- formatters yet. For example: If the Rendered file formatter will be used, this field is not available at the moment.)</em>'),
       '#maxlength' => variable_get('image_title_length', 500),
